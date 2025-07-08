@@ -1,5 +1,10 @@
-@import "~bootstrap/scss/bootstrap";
+$theme-colors: (
+        "primary": #012147,
+        'text-primary': #ededed,
+        'light':#fff
+);
 
+@import "~bootstrap/scss/bootstrap";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,8 +24,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,3 +45,224 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+html {
+  font-size: 16px;
+}
+
+//@font-face {
+//  font-family: "Glyphicons Halflings";
+//  src: url(./fonts/glyphicons-halflings-regular.woff);
+//}
+
+.btn.alpha {
+  margin: 2px;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #aaa;
+  padding: 3px 9px;
+}
+
+.btn.alpha:hover,
+.btn.alpha:focus {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-CSM {
+  color: #fff;
+  background-color: #0066c9;
+  border-color: #0066c9;
+}
+
+.btn-CSM:hover {
+  color: #fff;
+  background-color: #004990;
+  border-color: #0066c9;
+}
+
+td,
+th {
+  font-size: 14px;
+}
+
+.collegeCSM {
+  color: #03F;
+}
+
+.collegeDIS {
+  color: #63C;
+}
+
+#qlinkTable_filter {
+  float: right;
+  font-size: 12px;
+}
+
+#qlinkTable_info {
+  font-size: 12px;
+}
+
+.ai1ec-date {
+  background: transparent !important;
+  border-top: 0 !important;
+  padding: 10px 0 !important;
+}
+
+.ai1ec-date-title {
+  margin-left: 0px !important;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-event > a {
+  padding: .5em .8em !important;
+  border-radius: .2em !important;
+}
+
+a {
+  text-decoration: none;
+  color: #012147;
+  /*font-size: 2rem;*/
+}
+
+.btn-primary {
+  background-color: #012147;
+  border-color: #011b3b;
+}
+
+.btn-primary:hover {
+  background-color: #023167;
+  border-color: #011b3b;
+}
+
+.btn-primary:active {
+  background-color:  #173b6c!important;
+  border-color: #011b3b;
+}
+
+.btn-DIS {
+  background-color: #012147;
+  border-color: #011b3b;
+  color: #ededed;
+}
+.btn-DIS:hover {
+  background-color: #023167;
+  border-color: #011b3b;
+  color: #ededed;
+}
+.btn-DIS:active {
+  background-color:  #173b6c!important;
+  border-color: #011b3b;
+  color: #ededed;
+}
+
+.btn-info {
+  background-color: #205C40;
+  border-color: #103c2a;
+  color: #ededed;
+}
+
+.btn-info:hover {
+  background-color: #174732;
+  border-color: #103c2a;
+  color: #ededed;
+}
+.btn-info:active {
+  background-color: #1a4a35 !important;
+  border-color: #103c2a !important;
+  color: #ededed !important;
+}
+.btn-purple {
+  color: #fff;
+  background-color: #873897;
+  background: linear-gradient(to top right, #873897, #662a72);
+}
+.btn-purple:hover {
+  color: #fff;
+  background-color: #9a60a8;
+  background: linear-gradient(to top right, #873897, #662a72);
+}
+
+.text-primary {
+  color: #012147 !important;
+}
+
+.btn-CAN {
+  background-color: #205C40;
+  border-color: #1a4c36;
+  color: #fff;
+}
+
+.btn-CAN:hover {
+  background-color: #174732;
+  border-color: #133b2a;
+  color: #fff;
+}
+
+.btn-SKY {
+  background-color: #C41E3A;
+  border-color: #ab1b32;
+  color: #fff;
+}
+
+.btn-SKY:hover {
+  background-color: #991628;
+  border-color: #7f1122;
+  color: #fff;
+}
+
+.btn-dropdown {
+  background: white;
+  padding: 6px 12px;
+}
+
+.input-group .form-control,
+.input-group .input-group-text {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  height: auto;
+
+}
+
+.text-header {
+  color: #012147 !important;
+  font-size: 15px !important;
+  letter-spacing: -.25px !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+    height: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991.99px) {
+  .navbar-toggle {
+    display: block !important;
+  }
+}
+
