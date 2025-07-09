@@ -125,53 +125,6 @@ export default function Main() {
                                         </thead>
                                     </table>
 
-                                    <div className="row">
-                                        <CollegeLinks title={collegeLinks.CAN.title} link={collegeLinks.CAN.links}/>
-                                        <CollegeLinks title={collegeLinks.CSM.title} link={collegeLinks.CSM.links}/>
-                                        <CollegeLinks title={collegeLinks.SKY.title} link={collegeLinks.SKY.links}/>
-
-                                    </div>
-                                    <div className="row mt-3">
-                                        <div className="col-md-12">
-                                            <div id="CollegeLinks">
-                                                <div className="dis d-flex gap-2">
-                                                    <p className="fw-bolder">
-                                                        External Quick Links:
-                                                    </p>
-                                                    <div className={'d-flex justify-content-between w-75'}>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.cccco.edu/AboutUs/Divisions/TechResearchInfo/MIS/DataMartandReports/tabid/282/Default.aspx">
-                                                            Chancellors
-                                                            Office DataMart
-                                                        </a>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.educause.edu/">EduCause
-                                                        </a>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.google.com">Google
-                                                        </a>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.universitybusiness.com/">University
-                                                            Business
-                                                        </a>
-                                                        <div> |</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div className="col-12 col-xl-4">
                                     <div>
@@ -285,13 +238,47 @@ export default function Main() {
 
                                     </Dascontent>
                                 </div>
+                                <div className="row mt-3">
+                                    <CollegeLinks title={collegeLinks.CAN.title} link={collegeLinks.CAN.links}/>
+                                    <CollegeLinks title={collegeLinks.CSM.title} link={collegeLinks.CSM.links}/>
+                                    <CollegeLinks title={collegeLinks.SKY.title} link={collegeLinks.SKY.links}/>
 
-                            </div>
-                        </div>
-                        <div className="row">
+                                </div>
+                                <div>
+                                    <div className="dis d-flex flex-wrap gap-2">
+                                        <p className="fw-bolder m-0">
+                                            External Quick Links:
+                                        </p>
+                                        <div className={'d-flex gap-3 flex-wrap'}>
+                                            <a
+                                                className="text-primary"
+                                                style={{fontSize: '1rem'}}
+                                                href="http://www.cccco.edu/AboutUs/Divisions/TechResearchInfo/MIS/DataMartandReports/tabid/282/Default.aspx">
+                                                Chancellors
+                                                Office DataMart
+                                            </a>
+                                            <div>|</div>
+                                            <a
+                                                className="text-primary"
+                                                style={{fontSize: '1rem'}}
+                                                href="http://www.educause.edu/">EduCause
+                                            </a>
+                                            <div>|</div>
+                                            <a
+                                                className="text-primary"
+                                                style={{fontSize: '1rem'}}
+                                                href="http://www.google.com">Google
+                                            </a>
+                                            <div>|</div>
+                                            <a
+                                                className="text-primary"
+                                                style={{fontSize: '1rem'}}
+                                                href="http://www.universitybusiness.com/">University
+                                                Business
+                                            </a>
+                                        </div>
 
-                            <div className="col-md-4">
-                                <div className="row">
+                                    </div>
 
                                 </div>
                             </div>

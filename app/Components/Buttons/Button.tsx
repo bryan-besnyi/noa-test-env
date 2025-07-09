@@ -7,6 +7,7 @@ type label = {
 
 
 export default function Button(props: label) {
+    const {label, link} = props;
 
     const handleClick = () => {
         if (link) {
@@ -14,7 +15,6 @@ export default function Button(props: label) {
         }
     }
 
-    const {label, link} = props;
     return (
         <button
             type="submit" style={{fontSize: '1rem'}}
