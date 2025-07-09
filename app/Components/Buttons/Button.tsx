@@ -18,7 +18,7 @@ export default function Button(props: label) {
     return (
         <button
             type="submit" style={{fontSize: '1rem'}}
-            className="btn btn-primary"
+            className="btn btn-primary w-100"
             name="save"
             onClick={handleClick}>
             <i className="fa fa-search"></i>

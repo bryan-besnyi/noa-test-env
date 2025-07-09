@@ -18,11 +18,10 @@ export default function Dascontent({children, ...props}: dasContent) {
             <div className="col-md-12">
                 <div
                     style={{
-                        padding: '10px',
                         marginTop: '20px',
-                        background: '#eff8ff url(images/icon_directory.png) no-repeat top right'
+                        background: '#eff8ff'
                     }}
-                    className="rounded">
+                    className="rounded p-2">
                     {/*Title*/}
                     <h3>
                         <a href={link} target="_blank"

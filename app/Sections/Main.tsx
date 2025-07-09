@@ -2,6 +2,42 @@ import DeptBtn from "@/app/Components/Buttons/DeptBtn";
 import PortalBtn from "@/app/Components/Buttons/PortalBtn";
 import Button from "@/app/Components/Buttons/Button";
 import Dascontent from "@/app/Components/dascontent";
+import CollegeLinks from "@/app/Components/CollegeLinks";
+
+const collegeLinks = {
+    CAN: {
+        title: "Cañada College",
+        img: "images/college_canada.png",
+        links: [
+            {text: "Cañada Homepage", url: "https://canadacollege.edu/"},
+            {text: "Cañada Bookstore", url: "http://bookstore.canadacollege.edu/home.aspx"},
+            {text: "Cañada Library", url: "https://www.canadacollege.edu/library/"},
+            {text: "Cañada Construction Updates", url: "https://canadacollege.edu/construction/"}
+        ]
+    },
+    CSM: {
+        title: "College of San Mateo",
+        img: "images/college_csm.png",
+        links: [
+            {text: "CSM Homepage", url: "http://collegeofsanmateo.edu/"},
+            {text: "CSM Bookstore", url: "http://bookstore.collegeofsanmateo.edu/home.aspx"},
+            {text: "CSM Events", url: "https://calendar.collegeofsanmateo.edu/events"},
+            {text: "CSM Library", url: "https://www.collegeofsanmateo.edu/library/"},
+            {text: "CSM News", url: "https://www.collegeofsanmateo.edu/news/"}
+        ]
+    },
+    SKY: {
+        title: "Skyline College",
+        img: "images/college_skyline.png",
+        links: [
+            {text: "Skyline Homepage", url: "http://www.skylinecollege.edu/"},
+            {text: "Skyline Shines", url: "https://www.skylinecollege.edu/skylineshines/"},
+            {text: "Skyline Bookstore", url: "http://bookstore.skylinecollege.edu/home.aspx"},
+            {text: "Skyline Library", url: "https://skylinecollege.edu/library/"},
+            {text: "Skyline Construction Updates", url: "https://smccd.edu/construction/sky-notices.php"}
+        ]
+    }
+};
 
 const portalButtons = {
     SMCCD: {
@@ -88,6 +124,54 @@ export default function Main() {
                                         </tr>
                                         </thead>
                                     </table>
+
+                                    <div className="row">
+                                        <CollegeLinks title={collegeLinks.CAN.title} link={collegeLinks.CAN.links}/>
+                                        <CollegeLinks title={collegeLinks.CSM.title} link={collegeLinks.CSM.links}/>
+                                        <CollegeLinks title={collegeLinks.SKY.title} link={collegeLinks.SKY.links}/>
+
+                                    </div>
+                                    <div className="row mt-3">
+                                        <div className="col-md-12">
+                                            <div id="CollegeLinks">
+                                                <div className="dis d-flex gap-2">
+                                                    <p className="fw-bolder">
+                                                        External Quick Links:
+                                                    </p>
+                                                    <div className={'d-flex justify-content-between w-75'}>
+                                                        <div> |</div>
+                                                        <a
+                                                            className="text-primary"
+                                                            style={{fontSize: '1rem'}}
+                                                            href="http://www.cccco.edu/AboutUs/Divisions/TechResearchInfo/MIS/DataMartandReports/tabid/282/Default.aspx">
+                                                            Chancellors
+                                                            Office DataMart
+                                                        </a>
+                                                        <div> |</div>
+                                                        <a
+                                                            className="text-primary"
+                                                            style={{fontSize: '1rem'}}
+                                                            href="http://www.educause.edu/">EduCause
+                                                        </a>
+                                                        <div> |</div>
+                                                        <a
+                                                            className="text-primary"
+                                                            style={{fontSize: '1rem'}}
+                                                            href="http://www.google.com">Google
+                                                        </a>
+                                                        <div> |</div>
+                                                        <a
+                                                            className="text-primary"
+                                                            style={{fontSize: '1rem'}}
+                                                            href="http://www.universitybusiness.com/">University
+                                                            Business
+                                                        </a>
+                                                        <div> |</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="col-12 col-xl-4">
                                     <div>
@@ -111,28 +195,27 @@ export default function Main() {
                                     >
                                         <form action="//directory.smccd.edu/decider_portal.php" method="get"
                                               name="form1" id="form1">
-                                            <div className="form-group">
-                                                <label className="sr-only" htmlFor="givenName">First Name:
+                                            <div className="form-group mb-2">
+                                                <label className="visually-hidden" htmlFor="givenName">First Name:
                                                 </label>
                                                 <input className="form-control" placeholder="First Name"
                                                        type="text"
                                                        name="fname" id="givenName"/>
                                             </div>
                                             <div className="fieldpadding mb-3">
-                                                <label className="sr-only" htmlFor="sn" accessKey="L">
+                                                <label className="visually-hidden" htmlFor="sn" accessKey="L">
                                                     Last Name:
                                                 </label>
                                                 <input className="form-control" placeholder="Last Name"
                                                        type="text"
                                                        name="lname" id="sn"/>
                                             </div>
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <a
-                                                    className="text-primary"
-                                                    href="//www.smccd.edu/directory">Advanced Search
-                                                </a>
-                                                <Button label={'Find'}/>
-                                            </div>
+                                            <Button label={'Find'}/>
+                                            <a
+                                                className="text-primary"
+                                                href="//www.smccd.edu/directory">Advanced Search
+                                            </a>
+
                                         </form>
                                     </Dascontent>
                                     <Dascontent
@@ -159,170 +242,57 @@ export default function Main() {
                                              data-xml-url="./grablinks.php?url=https://banner.smccd.edu/xml/its_links2.xml"
                                              data-xml-cache="false"></div>
                                     </Dascontent>
+                                    <Dascontent title={'Facilities Help Center'}>
+                                        <img className="img-responsive" src="./images/facilities.png"
+                                             alt="facilities helpcenter"/>
+                                        <div className="caption">
+
+                                            <form
+                                                action="//helpcenter.smccd.edu/requestform/ldapauthenticate_onuma.php"
+                                                method="post" name="FacilitiesHelpForm" target="_blank"
+                                                id="FacilitiesHelpForm" className="form">
+                                                <div className="form-group">
+                                                    <div className="input-group rounded mb-2">
+                                                        <label className="visually-hidden" htmlFor="fac-username">User
+                                                            Name:
+                                                        </label>
+                                                        <input id="fac-username" type="text"
+                                                               className="form-control rounded-start"
+                                                               name="username"
+                                                               placeholder="username"
+                                                               aria-label="Recipient's username"
+                                                               aria-describedby="basic-addon2"/>
+                                                        <span className="input-group-text"
+                                                              id="basic-addon2">@smccd.edu</span>
+                                                    </div>
+
+                                                </div>
+                                                <div className="form-group clearfix mb-2">
+                                                    <div className="input-group">
+                                                        <label className="visually-hidden"
+                                                               htmlFor="fac-password">Password:
+                                                        </label>
+                                                        <input type="password" name="password" id="fac-password"
+                                                               className="form-control rounded"
+                                                               placeholder="email password"/>
+                                                    </div>
+                                                </div>
+                                                <div className="form-group clearfix">
+                                                    <Button label={'Login'}/>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </Dascontent>
                                 </div>
 
                             </div>
                         </div>
                         <div className="row">
-                            <br/>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-8">
-                                <div className="row">
-                                    <div className="col-md-4">
-                                        <a href="https://canadacollege.edu/">
-                                            <img
-                                                className="img-bordered img-responsive"
-                                                src="images/college_canada.png"
-                                                alt="Canada College Website"/>
-                                        </a>
-                                        <h3 style={{fontSize: '20px'}}>
-                                            <a
-                                                href="http://canadacollege.edu/">Ca&ntilde;ada College
-                                            </a>
-                                        </h3>
-                                        <a href="http://bookstore.canadacollege.edu/home.aspx">Ca&ntilde;ada
-                                            Bookstore
-                                        </a>
-                                        <br/>
-                                        <a href="https://www.canadacollege.edu/library/">Ca&ntilde;ada Library</a>
-                                        <br/>
-                                        <a href="https://canadacollege.edu/construction/">Ca&ntilde;ada Construction
-                                            Updates
-                                        </a>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <a href="http://collegeofsanmateo.edu/">
-                                            <img src="images/college_csm.png" alt="College of San Mateo"
-                                                 className="img-bordered img-responsive"/>
-                                        </a>
-                                        <h3 style={{fontSize: '20px'}}>
-                                            <a href="http://collegeofsanmateo.edu/">College
-                                                of San Mateo
-                                            </a>
-                                        </h3>
-                                        <a href="http://bookstore.collegeofsanmateo.edu/home.aspx">CSM Bookstore</a>
-                                        <br/>
-                                        <a href="https://calendar.collegeofsanmateo.edu/events">CSM Events</a>
-                                        <br/>
-                                        <a href="https://www.collegeofsanmateo.edu/library/">CSM Library</a>
-                                        <br/>
-                                        <a href="https://www.collegeofsanmateo.edu/news/">CSM News</a>
-                                        <br/>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <a href="http://www.skylinecollege.edu/">
-                                            <img
-                                                src="images/college_skyline.png" alt="Skyline College"
-                                                className="img-responsive img-bordered"/>
-                                        </a>
-                                        <h3 style={{fontSize: '20px'}}>
-                                            <a
-                                                href="http://www.skylinecollege.edu/">Skyline College
-                                            </a>
-                                        </h3>
-                                        <a href="https://www.skylinecollege.edu/skylineshines/">Skyline Shines</a>
-                                        <br/>
-                                        <a href="http://bookstore.skylinecollege.edu/home.aspx">Skyline
-                                            Bookstore
-                                        </a>
-                                        <br/>
-                                        <a href="https://skylinecollege.edu/library/">Skyline Library</a>
-                                        <br/>
-                                        <a href="https://smccd.edu/construction/sky-notices.php">Skyline
-                                            Construction
-                                            Updates
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="row mt-3">
-                                    <div className="col-md-12">
-                                        <div id="CollegeLinks">
-                                            <div className="dis d-flex gap-2">
-                                                <p className="fw-bolder">
-                                                    External Quick Links:
-                                                </p>
-                                                <div>
-                                                    <a
-                                                        className="text-primary"
-                                                        style={{fontSize: '1rem'}}
-                                                        href="http://www.cccco.edu/AboutUs/Divisions/TechResearchInfo/MIS/DataMartandReports/tabid/282/Default.aspx">
-                                                        Chancellors
-                                                        Office DataMart
-                                                    </a>
-                                                    |
-                                                    <a
-                                                        className="text-primary"
-                                                        style={{fontSize: '1rem'}}
-                                                        href="http://www.educause.edu/">EduCause
-                                                    </a>
-                                                    |
-                                                    <a
-                                                        className="text-primary"
-                                                        style={{fontSize: '1rem'}}
-                                                        href="http://www.google.com">Google
-                                                    </a>
-                                                    |
-                                                    <a
-                                                        className="text-primary"
-                                                        style={{fontSize: '1rem'}}
-                                                        href="http://www.universitybusiness.com/">University
-                                                        Business
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div className="col-md-4">
                                 <div className="row">
-                                    <div className="col-md-12">
-                                        <div className="rounded" style={{background: '#eff8ff', padding: '10px'}}>
-                                            <img className="img-responsive" src="./images/facilities.png"
-                                                 alt="facilities helpcenter"/>
-                                            <div className="caption">
-                                                <h3 className="text-primary h2">Facilities Help center</h3>
-                                                <form
-                                                    action="//helpcenter.smccd.edu/requestform/ldapauthenticate_onuma.php"
-                                                    method="post" name="FacilitiesHelpForm" target="_blank"
-                                                    id="FacilitiesHelpForm" className="form">
-                                                    <div className="form-group">
-                                                        <div className="input-group rounded">
-                                                            <label className="sr-only" htmlFor="fac-username">User
-                                                                Name:
-                                                            </label>
-                                                            <input id="fac-username" type="text"
-                                                                   className="form-control rounded-start"
-                                                                   name="username"
-                                                                   placeholder="username"
-                                                                   aria-label="Recipient's username"
-                                                                   aria-describedby="basic-addon2"/>
-                                                            <span className="input-group-text"
-                                                                  id="basic-addon2">@smccd.edu</span>
-                                                        </div>
 
-                                                    </div>
-                                                    <div className="form-group clearfix">
-                                                        <div className="input-group">
-                                                            <label className="sr-only"
-                                                                   htmlFor="fac-password">Password:
-                                                            </label>
-                                                            <input type="password" name="password" id="fac-password"
-                                                                   className="form-control rounded"
-                                                                   placeholder="email password"/>
-                                                        </div>
-                                                    </div>
-                                                    <div className="form-group clearfix">
-                                                        <button type="submit"
-                                                                className="btn btn-primary btn-block center-block"
-                                                                name="save">Login
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
