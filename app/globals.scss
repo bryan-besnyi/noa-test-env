@@ -1,3 +1,27 @@
+// Define custom Bootstrap variables BEFORE importing Bootstrap
+
+// Popular color options for $primary (uncomment one to try):
+// $primary: #ff6b6b; // Coral Red
+// $primary: #4ecdc4; // Teal
+// $primary: #45b7d1; // Sky Blue
+// $primary: #96ceb4; // Mint Green
+// $primary: #feca57; // Golden Yellow
+// $primary: #ff9ff3; // Pink
+// $primary: #54a0ff; // Bright Blue
+$primary: #6f42c1; // Custom purple primary color (currently active)
+
+$secondary: #fd7e14; // Custom orange secondary color
+$success: #198754; // Custom green (optional - keeping Bootstrap default)
+$info: #0dcaf0; // Custom cyan (optional)
+$warning: #ffc107; // Custom yellow (optional)  
+$danger: #dc3545; // Custom red (optional)
+
+// You can also customize other Bootstrap variables:
+$border-radius: 0.5rem; // More rounded corners
+$font-size-base: 1rem; // Base font size
+$line-height-base: 1.6; // Better line height
+
+// Import Bootstrap with your custom variables
 @import "~bootstrap/scss/bootstrap";
 
 :root {

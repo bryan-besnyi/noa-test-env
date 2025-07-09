@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="container-fluid">
@@ -7,13 +5,7 @@ export default function Home() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
         <div className="container">
           <a className="navbar-brand" href="#">
-            <Image
-              src="/next.svg"
-              alt="Next.js logo"
-              width={120}
-              height={25}
-              priority
-            />
+            
           </a>
           <button 
             className="navbar-toggler" 
