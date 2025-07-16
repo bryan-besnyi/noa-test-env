@@ -1,18 +1,18 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import QuickLinksTable from './QuickLinksTable';
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import QuickLinksTable from "./QuickLinksTable";
 
 const meta = {
-  title: 'Components/QuickLinksTable',
+  title: "Components/QuickLinksTable",
   component: QuickLinksTable,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     className: {
-      control: 'text',
-      description: 'Additional CSS classes to apply to the component'
-    }
+      control: "text",
+      description: "Additional CSS classes to apply to the component",
+    },
   },
 } satisfies Meta<typeof QuickLinksTable>;
 
@@ -20,11 +20,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    rawLinks: [],
+  },
 };
 
 export const WithCustomClass: Story = {
   args: {
-    className: 'my-4 p-3 border rounded',
+    className: "my-4 p-3 border rounded",
+    rawLinks: [],
   },
-}; 
+};
