@@ -1,0 +1,144 @@
+// SMCCCD Official Color Utility Classes
+// This file provides utility classes for all official SMCCCD colors
+
+// Text color utilities
+.text-smcccd-blue { color: $smcccd-blue !important; }
+.text-smcccd-black { color: $smcccd-black !important; }
+.text-smcccd-white { color: $smcccd-white !important; }
+.text-smcccd-burgundy { color: $smcccd-burgundy !important; }
+.text-smcccd-sky-blue { color: $smcccd-sky-blue !important; }
+.text-smcccd-apple-green { color: $smcccd-apple-green !important; }
+.text-smcccd-bright-gray { color: $smcccd-bright-gray !important; }
+
+// Background color utilities
+.bg-smcccd-blue { 
+  background-color: $smcccd-blue !important; 
+  color: $smcccd-white !important; // Ensure proper contrast
+}
+.bg-smcccd-black { 
+  background-color: $smcccd-black !important; 
+  color: $smcccd-white !important; 
+}
+.bg-smcccd-white { 
+  background-color: $smcccd-white !important; 
+  color: $smcccd-black !important; 
+}
+.bg-smcccd-burgundy { 
+  background-color: $smcccd-burgundy !important; 
+  color: $smcccd-white !important; 
+}
+.bg-smcccd-sky-blue { 
+  background-color: $smcccd-sky-blue !important; 
+  color: $smcccd-white !important; 
+}
+.bg-smcccd-apple-green { 
+  background-color: $smcccd-apple-green !important; 
+  color: $smcccd-white !important; 
+}
+.bg-smcccd-bright-gray { 
+  background-color: $smcccd-bright-gray !important; 
+  color: $smcccd-black !important; 
+}
+
+// Border color utilities
+.border-smcccd-blue { border-color: $smcccd-blue !important; }
+.border-smcccd-black { border-color: $smcccd-black !important; }
+.border-smcccd-white { border-color: $smcccd-white !important; }
+.border-smcccd-burgundy { border-color: $smcccd-burgundy !important; }
+.border-smcccd-sky-blue { border-color: $smcccd-sky-blue !important; }
+.border-smcccd-apple-green { border-color: $smcccd-apple-green !important; }
+.border-smcccd-bright-gray { border-color: $smcccd-bright-gray !important; }
+
+// Button variants using official colors
+.btn-smcccd-blue {
+  background-color: $smcccd-blue;
+  border-color: $smcccd-blue;
+  color: $smcccd-white;
+  
+  &:hover {
+    background-color: darken($smcccd-blue, 10%);
+    border-color: darken($smcccd-blue, 10%);
+    color: $smcccd-white;
+  }
+}
+
+.btn-smcccd-burgundy {
+  background-color: $smcccd-burgundy;
+  border-color: $smcccd-burgundy;
+  color: $smcccd-white;
+  
+  &:hover {
+    background-color: darken($smcccd-burgundy, 10%);
+    border-color: darken($smcccd-burgundy, 10%);
+    color: $smcccd-white;
+  }
+}
+
+.btn-smcccd-sky-blue {
+  background-color: $smcccd-sky-blue;
+  border-color: $smcccd-sky-blue;
+  color: $smcccd-white;
+  
+  &:hover {
+    background-color: darken($smcccd-sky-blue, 10%);
+    border-color: darken($smcccd-sky-blue, 10%);
+    color: $smcccd-white;
+  }
+}
+
+.btn-smcccd-apple-green {
+  background-color: $smcccd-apple-green;
+  border-color: $smcccd-apple-green;
+  color: $smcccd-white;
+  
+  &:hover {
+    background-color: darken($smcccd-apple-green, 10%);
+    border-color: darken($smcccd-apple-green, 10%);
+    color: $smcccd-white;
+  }
+}
+
+// Outline button variants
+.btn-outline-smcccd-blue {
+  color: $smcccd-blue;
+  border-color: $smcccd-blue;
+  
+  &:hover {
+    background-color: $smcccd-blue;
+    border-color: $smcccd-blue;
+    color: $smcccd-white;
+  }
+}
+
+.btn-outline-smcccd-burgundy {
+  color: $smcccd-burgundy;
+  border-color: $smcccd-burgundy;
+  
+  &:hover {
+    background-color: $smcccd-burgundy;
+    border-color: $smcccd-burgundy;
+    color: $smcccd-white;
+  }
+}
+
+.btn-outline-smcccd-sky-blue {
+  color: $smcccd-sky-blue;
+  border-color: $smcccd-sky-blue;
+  
+  &:hover {
+    background-color: $smcccd-sky-blue;
+    border-color: $smcccd-sky-blue;
+    color: $smcccd-white;
+  }
+}
+
+.btn-outline-smcccd-apple-green {
+  color: $smcccd-apple-green;
+  border-color: $smcccd-apple-green;
+  
+  &:hover {
+    background-color: $smcccd-apple-green;
+    border-color: $smcccd-apple-green;
+    color: $smcccd-white;
+  }
+} 

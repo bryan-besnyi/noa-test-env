@@ -1,11 +1,23 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
-import AtoZIndex from "@/app/Components/AtoZIndex";
-import TopBarNav from "@/app/Components/TopBarNav";
-import Image from "next/image";
+"use client";
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars, faTimes, faUser} from '@fortawesome/free-solid-svg-icons';
+import TopBarNav from "@/app/components/TopBarNav";
+import SearchForm from "@/app/components/SearchForm";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Navbar() {
+    const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+    const toggleMobileNav = () => {
+        setMobileNavOpen(!mobileNavOpen);
+    };
+
+    const closeMobileNav = () => {
+        setMobileNavOpen(false);
+    };
+
     return (
         <section className="Header sticky sticky-top">
             <TopBarNav/>
@@ -22,18 +34,24 @@ export default function Navbar() {
                             </div>
                         </div>
 
-
-                        <button className={'d-block d-lg-none bg-primary p-1 border-0 rounded text-light'} type="button"
-                                style={{
-                                    width: '2.25rem',
-                                    height: '2.25rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                }}>
-                            <FontAwesomeIcon icon={faBars} style={{width: '1.75rem', height: '1.75rem'}}/>
+                        {/* Mobile Menu Toggle */}
+                        <button 
+                            className={'d-block d-lg-none bg-primary p-1 border-0 rounded text-light'} 
+                            type="button"
+                            onClick={toggleMobileNav}
+                            aria-expanded={mobileNavOpen}
+                            aria-label="Toggle navigation"
+                            style={{
+                                width: '2.25rem',
+                                height: '2.25rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}>
+                            <FontAwesomeIcon icon={mobileNavOpen ? faTimes : faBars} style={{width: '1.75rem', height: '1.75rem'}}/>
                         </button>
 
+                        {/* Desktop Navigation */}
                         <div id="main-navbar-collapse" className="d-none d-lg-block">
                             <ul className="nav gap-5">
                                 <li>
@@ -78,11 +96,82 @@ export default function Navbar() {
                             </ul>
                         </div>
                     </div>
+
+                    {/* Mobile Navigation Menu */}
+                    <div className={`mobile-nav-menu ${mobileNavOpen ? 'show' : ''} d-lg-none`}>
+                        <div className="mobile-nav-content">
+                            {/* Main Navigation Links */}
+                            <div className="mobile-nav-section">
+                                <h5 className="mobile-nav-heading">Main Navigation</h5>
+                                <ul className="mobile-nav-list">
+                                    <li>
+                                        <a href="https://www.smccd.edu/portal/" 
+                                           className="mobile-nav-link" 
+                                           onClick={closeMobileNav}>
+                                            Portal
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://banner.smccd.edu" 
+                                           className="mobile-nav-link" 
+                                           onClick={closeMobileNav}>
+                                            Banner
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://websmart.smccd.edu/" 
+                                           className="mobile-nav-link" 
+                                           onClick={closeMobileNav}>
+                                            WebSmart
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://banner.smccd.edu/dgw_portal.htm" 
+                                           className="mobile-nav-link" 
+                                           onClick={closeMobileNav}>
+                                            Degree Works
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://downloads.smccd.edu/" 
+                                           className="mobile-nav-link" 
+                                           onClick={closeMobileNav}>
+                                            Downloads
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://smccd.edu/sharepoint" 
+                                           className="mobile-nav-link" 
+                                           onClick={closeMobileNav}>
+                                            Sharepoint
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Top Bar Utilities */}
+                            <div className="mobile-nav-section">
+                                <h5 className="mobile-nav-heading">Quick Access</h5>
+                                <div className="mobile-nav-utilities">
+                                    <a href="http://directory.smccd.edu/"
+                                       className="mobile-nav-utility-btn"
+                                       onClick={closeMobileNav}
+                                       aria-label="User Directory">
+                                        <FontAwesomeIcon icon={faUser} />
+                                        <span>Directory</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Search */}
+                            <div className="mobile-nav-section">
+                                <h5 className="mobile-nav-heading">Search</h5>
+                                <SearchForm className="mobile-nav-search" size="sm" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
-
-
-            <AtoZIndex/>
         </section>
     )
 }

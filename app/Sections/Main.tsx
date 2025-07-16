@@ -1,8 +1,12 @@
-import DeptBtn from "@/app/Components/Buttons/DeptBtn";
-import PortalBtn from "@/app/Components/Buttons/PortalBtn";
-import Button from "@/app/Components/Buttons/Button";
-import Dascontent from "@/app/Components/dascontent";
-import CollegeLinks from "@/app/Components/CollegeLinks";
+import DeptBtn from "@/app/components/Buttons/DeptBtn";
+import PortalBtn from "@/app/components/Buttons/PortalBtn";
+import Button from "@/app/components/Buttons/Button";
+import Dascontent from "@/app/components/dascontent";
+import CollegeLinks from "@/app/components/CollegeLinks";
+import ContentCard from "@/app/components/Cards/ContentCard";
+import DirectorySearchForm from "@/app/components/Forms/DirectorySearchForm";
+import FacilitiesLoginForm from "@/app/components/Forms/FacilitiesLoginForm";
+import ExternalLinksSection from "@/app/components/Navigation/ExternalLinksSection";
 
 const collegeLinks = {
     CAN: {
@@ -93,10 +97,16 @@ const schools = {
     }
 };
 
+const externalLinks = [
+    { text: "Chancellors Office DataMart", url: "http://www.cccco.edu/AboutUs/Divisions/TechResearchInfo/MIS/DataMartandReports/tabid/282/Default.aspx" },
+    { text: "EduCause", url: "http://www.educause.edu/" },
+    { text: "Google", url: "http://www.google.com" },
+    { text: "University Business", url: "http://www.universitybusiness.com/" }
+];
+
 export default function Main() {
     return (
         <div>
-
             <div id="emergency" data-smccd-emergency data-site-location="portal"
                  data-url="https://emergency.smccd.info/wp-json/wp/v2/" data-style="alert"
                  data-post-type='["notifications"]' className={'bg-light pt-3'}></div>
@@ -133,43 +143,7 @@ export default function Main() {
                                     </div>
                                     <div className="row mt-3">
                                         <div className="col-md-12">
-                                            <div id="CollegeLinks">
-                                                <div className="dis d-flex gap-2">
-                                                    <p className="fw-bolder">
-                                                        External Quick Links:
-                                                    </p>
-                                                    <div className={'d-flex justify-content-between w-75'}>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.cccco.edu/AboutUs/Divisions/TechResearchInfo/MIS/DataMartandReports/tabid/282/Default.aspx">
-                                                            Chancellors
-                                                            Office DataMart
-                                                        </a>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.educause.edu/">EduCause
-                                                        </a>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.google.com">Google
-                                                        </a>
-                                                        <div> |</div>
-                                                        <a
-                                                            className="text-primary"
-                                                            style={{fontSize: '1rem'}}
-                                                            href="http://www.universitybusiness.com/">University
-                                                            Business
-                                                        </a>
-                                                        <div> |</div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <ExternalLinksSection links={externalLinks} />
                                         </div>
                                     </div>
                                 </div>
@@ -189,35 +163,12 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <Dascontent
-                                        title={'District Directory'}
-                                        link={'https://directory.smccd.edu/'}
+                                    <ContentCard
+                                        title="District Directory"
+                                        link="https://directory.smccd.edu/"
                                     >
-                                        <form action="//directory.smccd.edu/decider_portal.php" method="get"
-                                              name="form1" id="form1">
-                                            <div className="form-group mb-2">
-                                                <label className="visually-hidden" htmlFor="givenName">First Name:
-                                                </label>
-                                                <input className="form-control" placeholder="First Name"
-                                                       type="text"
-                                                       name="fname" id="givenName"/>
-                                            </div>
-                                            <div className="fieldpadding mb-3">
-                                                <label className="visually-hidden" htmlFor="sn" accessKey="L">
-                                                    Last Name:
-                                                </label>
-                                                <input className="form-control" placeholder="Last Name"
-                                                       type="text"
-                                                       name="lname" id="sn"/>
-                                            </div>
-                                            <Button label={'Find'}/>
-                                            <a
-                                                className="text-primary"
-                                                href="//www.smccd.edu/directory">Advanced Search
-                                            </a>
-
-                                        </form>
-                                    </Dascontent>
+                                        <DirectorySearchForm />
+                                    </ContentCard>
                                     <Dascontent
                                         title={'Keenan SafeColleges'}
                                         paragraph={'Online compliance training courses for District employees.'}
@@ -242,48 +193,9 @@ export default function Main() {
                                              data-xml-url="./grablinks.php?url=https://banner.smccd.edu/xml/its_links2.xml"
                                              data-xml-cache="false"></div>
                                     </Dascontent>
-                                    <Dascontent title={'Facilities Help Center'}>
-                                        <img className="img-responsive" src="./images/facilities.png"
-                                             alt="facilities helpcenter"/>
-                                        <div className="caption">
-
-                                            <form
-                                                action="//helpcenter.smccd.edu/requestform/ldapauthenticate_onuma.php"
-                                                method="post" name="FacilitiesHelpForm" target="_blank"
-                                                id="FacilitiesHelpForm" className="form">
-                                                <div className="form-group">
-                                                    <div className="input-group rounded mb-2">
-                                                        <label className="visually-hidden" htmlFor="fac-username">User
-                                                            Name:
-                                                        </label>
-                                                        <input id="fac-username" type="text"
-                                                               className="form-control rounded-start"
-                                                               name="username"
-                                                               placeholder="username"
-                                                               aria-label="Recipient's username"
-                                                               aria-describedby="basic-addon2"/>
-                                                        <span className="input-group-text"
-                                                              id="basic-addon2">@smccd.edu</span>
-                                                    </div>
-
-                                                </div>
-                                                <div className="form-group clearfix mb-2">
-                                                    <div className="input-group">
-                                                        <label className="visually-hidden"
-                                                               htmlFor="fac-password">Password:
-                                                        </label>
-                                                        <input type="password" name="password" id="fac-password"
-                                                               className="form-control rounded"
-                                                               placeholder="email password"/>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group clearfix">
-                                                    <Button label={'Login'}/>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </Dascontent>
+                                    <ContentCard title="Facilities Help Center">
+                                        <FacilitiesLoginForm />
+                                    </ContentCard>
                                 </div>
 
                             </div>

@@ -1,0 +1,54 @@
+// College-specific text colors
+.collegeDIS {
+  color: $college-dis !important;
+}
+
+.collegeCAN {
+  color: $college-can !important;
+}
+
+.collegeCSM {
+  color: $college-csm !important;
+}
+
+.collegeSKY {
+  color: $college-sky !important;
+}
+
+// Hover states for text colors
+.collegeDIS:hover {
+  color: darken($college-dis, 15%) !important;
+}
+
+.collegeCAN:hover {
+  color: darken($college-can, 15%) !important;
+}
+
+.collegeCSM:hover {
+  color: darken($college-csm, 15%) !important;
+}
+
+.collegeSKY:hover {
+  color: darken($college-sky, 15%) !important;
+}
+
+// Background color variants
+.bg-collegeDIS {
+  background-color: $college-dis !important;
+  color: $white !important;
+}
+
+.bg-collegeCAN {
+  background-color: $college-can !important;
+  color: $white !important;
+}
+
+.bg-collegeCSM {
+  background-color: $college-csm !important;
+  color: $white !important;
+}
+
+.bg-collegeSKY {
+  background-color: $college-sky !important;
+  color: $white !important;
+} 

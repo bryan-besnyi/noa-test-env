@@ -1,0 +1,38 @@
+// Base Theme File - Import all variables and setup Bootstrap
+// This file should be imported before Bootstrap
+
+// Import all theme variables
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/layout";
+
+// Map theme colors to Bootstrap variables
+$primary: $smcccd-primary;
+$secondary: $smcccd-secondary;
+$success: $success-color;
+$info: $info-color;
+$warning: $warning-color;
+$danger: $danger-color;
+
+// Typography mapping
+$font-family-sans-serif: $font-family-sans-serif;
+$font-family-monospace: $font-family-monospace;
+$font-size-base: $font-size-base;
+$line-height-base: $line-height-base;
+
+// Layout mapping
+$border-radius: $border-radius;
+$border-radius-sm: $border-radius-sm;
+$border-radius-lg: $border-radius-lg;
+$border-radius-xl: $border-radius-xl;
+$border-radius-pill: $border-radius-pill;
+
+// Container and grid
+$container-max-widths: $container-max-widths;
+$grid-breakpoints: $grid-breakpoints;
+
+// Shadows
+$box-shadow: $box-shadow;
+$box-shadow-sm: $box-shadow-sm;
+$box-shadow-lg: $box-shadow-lg;
+$box-shadow-inset: $box-shadow-inset; 

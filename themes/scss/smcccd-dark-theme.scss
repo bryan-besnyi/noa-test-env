@@ -1,0 +1,81 @@
+// SMCCCD Dark Theme Variant
+// This creates a dark version of the SMCCCD theme
+
+// Override color variables for dark theme
+$smcccd-primary: #4a8bc2 !default; // Lighter blue for dark theme
+$smcccd-secondary: #ff8c42 !default; // Adjusted orange
+
+// Dark theme colors
+$gray-100: #1a1d23 !default;
+$gray-200: #25282e !default;
+$gray-300: #2f3239 !default;
+$gray-400: #3a3d44 !default;
+$gray-500: #454a52 !default;
+$gray-600: #6c757d !default;
+$gray-700: #8a9199 !default;
+$gray-800: #dee2e6 !default;
+$gray-900: #f8f9fa !default;
+
+$white: #ffffff !default;
+$black: #000000 !default;
+
+// Body colors for dark theme
+$body-bg: $gray-100;
+$body-color: $gray-800;
+
+// Import theme base (this will use the overridden variables)
+@import "theme-base";
+
+// Import Bootstrap with dark theme variables
+@import "bootstrap/scss/bootstrap";
+
+// Import custom components
+@import "components/college-buttons";
+@import "components/college-text";
+@import "components/smcccd-colors";
+
+// Dark theme specific overrides
+.employee-portal-header {
+  background-color: $gray-200;
+  border-bottom: 1px solid $gray-300;
+}
+
+.quick-links-section {
+  background-color: $gray-200;
+}
+
+.card {
+  background-color: $gray-200;
+  border-color: $gray-300;
+  
+  .card-header {
+    background-color: $gray-300;
+    border-bottom-color: $gray-400;
+  }
+}
+
+.college-grid {
+  .college-card {
+    background-color: $gray-200;
+    border-color: $gray-300;
+  }
+}
+
+// Form adjustments for dark theme
+.portal-form {
+  .form-control {
+    background-color: $gray-200;
+    border-color: $gray-400;
+    color: $gray-800;
+    
+    &:focus {
+      background-color: $gray-100;
+      border-color: $primary;
+      color: $gray-900;
+    }
+    
+    &::placeholder {
+      color: $gray-600;
+    }
+  }
+} 

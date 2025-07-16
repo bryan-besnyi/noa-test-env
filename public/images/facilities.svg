@@ -1,0 +1,9 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#ffc107"/>
+  <text x="200" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" dominant-baseline="middle">
+    Facilities Helpcenter
+  </text>
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" dominant-baseline="middle">
+    Login Portal
+  </text>
+</svg> 

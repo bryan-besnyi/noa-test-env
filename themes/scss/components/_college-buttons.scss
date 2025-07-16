@@ -1,0 +1,116 @@
+// College-specific button styles
+.btn-DIS {
+  color: $white;
+  background-color: $college-dis;
+  border-color: $college-dis;
+
+  &:hover {
+    color: $white;
+    background-color: darken($college-dis, 10%);
+    border-color: darken($college-dis, 10%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($college-dis, 0.5);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($college-dis, 15%);
+    border-color: darken($college-dis, 15%);
+  }
+}
+
+.btn-CAN {
+  color: $white;
+  background-color: $college-can;
+  border-color: $college-can;
+
+  &:hover {
+    color: $white;
+    background-color: darken($college-can, 10%);
+    border-color: darken($college-can, 10%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($college-can, 0.5);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($college-can, 15%);
+    border-color: darken($college-can, 15%);
+  }
+}
+
+.btn-CSM {
+  color: $white;
+  background-color: $college-csm;
+  border-color: $college-csm;
+
+  &:hover {
+    color: $white;
+    background-color: darken($college-csm, 10%);
+    border-color: darken($college-csm, 10%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($college-csm, 0.5);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($college-csm, 15%);
+    border-color: darken($college-csm, 15%);
+  }
+}
+
+.btn-SKY {
+  color: $white;
+  background-color: $college-sky;
+  border-color: $college-sky;
+
+  &:hover {
+    color: $white;
+    background-color: darken($college-sky, 10%);
+    border-color: darken($college-sky, 10%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($college-sky, 0.5);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($college-sky, 15%);
+    border-color: darken($college-sky, 15%);
+  }
+}
+
+// Purple button variant
+.btn-purple {
+  color: $white;
+  background-color: $theme-purple;
+  border-color: $theme-purple;
+
+  &:hover {
+    color: $white;
+    background-color: darken($theme-purple, 10%);
+    border-color: darken($theme-purple, 10%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($theme-purple, 0.5);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($theme-purple, 15%);
+    border-color: darken($theme-purple, 15%);
+  }
+} 

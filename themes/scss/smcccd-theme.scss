@@ -1,0 +1,97 @@
+// SMCCCD Main Theme
+// This file compiles to a standalone CSS file for the portal
+
+// Import theme base (variables and Bootstrap variable mappings)
+@import "theme-base";
+
+// Import Bootstrap with our custom variables
+@import "bootstrap/scss/bootstrap";
+
+// Import custom components
+@import "components/college-buttons";
+@import "components/college-text";
+@import "components/smcccd-colors";
+
+// Portal-specific styles
+.employee-portal-header {
+  background-color: $primary;
+  color: $white;
+  padding: 1rem 0;
+  
+  h1 {
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.quick-links-section {
+  background-color: $gray-100;
+  padding: 2rem 0;
+  
+  .card {
+    border: none;
+    box-shadow: $box-shadow;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: $box-shadow-lg;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.college-grid {
+  .college-card {
+    border: 1px solid $gray-300;
+    border-radius: $border-radius;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: $box-shadow-lg;
+      transform: translateY(-2px);
+    }
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+
+// Form styling
+.portal-form {
+  .form-control {
+    border-radius: $border-radius;
+    border: 1px solid $gray-300;
+    
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+    }
+  }
+  
+  .btn {
+    border-radius: $border-radius;
+    font-weight: $font-weight-medium;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .college-grid {
+    .btn {
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  .employee-portal-header {
+    text-align: center;
+    
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+} 

@@ -1,0 +1,53 @@
+// SMCCCD Official Color Palette
+// Primary colors from the official palette
+$smcccd-blue: #002F65 !default;      // Official SMCCCD Blue
+$smcccd-black: #000000 !default;     // Official Black
+$smcccd-white: #ffffff !default;     // Official White
+
+// Accent colors from the official palette
+$smcccd-burgundy: #72312B !default;  // Official Burgundy
+$smcccd-sky-blue: #5882B1 !default;  // Official Sky Blue
+$smcccd-apple-green: #8D9848 !default; // Official Apple Green
+$smcccd-bright-gray: #AEB19A !default; // Official Bright Gray
+
+// Legacy/Current colors (for backward compatibility)
+$smcccd-current-blue: #012147 !default; // Current web color (used in header)
+
+// Base brand colors (using official palette)
+$smcccd-primary: $smcccd-blue !default;
+$smcccd-secondary: #fd7e14 !default;
+
+// College-specific colors (keeping current assignments but can be updated)
+$college-dis: $smcccd-current-blue !default; // District (current web color)
+$college-can: $smcccd-apple-green !default; // Cañada (using official green)
+$college-csm: $smcccd-sky-blue !default; // CSM (using official sky blue)
+$college-sky: $smcccd-burgundy !default; // Skyline (using official burgundy)
+
+// Status colors
+$success-color: $smcccd-apple-green !default;
+$info-color: $smcccd-sky-blue !default;
+$warning-color: #ffc107 !default;
+$danger-color: $smcccd-burgundy !default;
+
+// Neutral colors (enhanced with official colors)
+$white: $smcccd-white !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: $smcccd-bright-gray !default; // Using official bright gray
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: $smcccd-black !default;
+
+// Alternative theme colors (keeping existing for compatibility)
+$theme-coral: #ff6b6b !default;
+$theme-teal: #4ecdc4 !default;
+$theme-skyblue: #45b7d1 !default;
+$theme-mint: #96ceb4 !default;
+$theme-golden: #feca57 !default;
+$theme-pink: #ff9ff3 !default;
+$theme-brightblue: #54a0ff !default;
+$theme-purple: #6f42c1 !default; 
